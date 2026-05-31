@@ -57,9 +57,8 @@ export const profileConfig: ProfileConfig = {
 	name: "Yusuf",
 	bio: "Exploring software, ideas, books, games, and everything that sparks curiosity.",
 	links: [
-		
-			// You will need to install the corresponding icon set if it's not already included
-			// `pnpm add @iconify-json/<icon-set-name>`
+		// You will need to install the corresponding icon set if it's not already included
+		// `pnpm add @iconify-json/<icon-set-name>`
 		{
 			name: "GitHub",
 			icon: "fa6-brands:github",
