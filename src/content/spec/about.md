@@ -1,5 +1,4 @@
 # About
-# About
 
 I’m a senior **Mathematical Engineering** student at **Yıldız Technical University (Istanbul)** (expected graduation: **June 2026**). I’m a **Machine Learning** and **Data Science** enthusiast who enjoys turning mathematical ideas into practical, real‑world models.
 
