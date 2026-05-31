@@ -1,8 +1,10 @@
 ---
-title: SQL Notlarım
+title: SQL Notlarım 1
 published: 2026-06-01
 description: PostgreSQL notlarım
-tags: [SQL, Notes]
+tags:
+  - SQL
+  - Notes
 category: SQL
 draft: false
 ---
