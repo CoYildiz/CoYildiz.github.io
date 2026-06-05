@@ -1,5 +1,5 @@
 ---
-title: Linux Commands
+title: Linux Commands - 1
 published: 2026-06-02
 description: CIL notes
 tags:
@@ -7,6 +7,7 @@ tags:
   - Notes
 category: Learning
 draft: false
+language: en
 ---
 
 ## Overview
