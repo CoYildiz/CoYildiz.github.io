@@ -1,12 +1,13 @@
 ---
 title: SQL Notlarım 4
 published: 2026-06-01
-description: PostgreSQL Summary Stats and Window Functions 
+description: PostgreSQL Summary Stats and Window Functions
 tags:
   - SQL
   - Notes
 category: SQL
 draft: false
+language: en
 ---
 # 5 - PostgreSQL Summary Stats and Window Functions 
 

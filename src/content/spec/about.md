@@ -9,29 +9,25 @@ This blog is a collection of things I learn, projects I build, books I read, gam
 Thanks for stopping by.
 ---
 
-## Education
+> If you want to read more...
+## Some Fight Club Thing
 
-**B.Sc. in Mathematical Engineering** — Yıldız Technical University, Istanbul  
-2021 – Present (Expected: June 2026)
+I started this blog recently (about two days ago), and honestly, I'm not entirely sure why I'm writing.
 
----
+I feel like I should answer a simple question: why am I doing this?
 
-## Skills
+First of all, I'm not really someone who shares their thoughts publicly. I've always preferred keeping ideas to myself rather than putting them online. Yet here I am, writing a blog. I don't know if I'll still be doing this a month from now, but for now it feels worth trying.
 
-- **Programming:** Python (Advanced), SQL, C/C++
-- **Databases:** Microsoft SQL Server, SQLite
-- **Other:** OOP, Data Structures & Algorithms, Bash, English (B2)
+Another reason is that I want to improve my English. If English is your second language, you probably know what I mean. Reading and listening are one thing; writing and speaking are much harder. At least that's how it feels for me.
 
----
+The last reason is simpler. It seems like everyone is sharing their thoughts, projects, and opinions online. Maybe I can do the same. Maybe I have something worth saying, or maybe I don't. Either way, writing feels like a good experiment.
 
-## Projects
+The funny thing is that almost nobody will read this. Somehow that's comforting and a little anxiety-inducing at the same time. So if you do end up reading this, feel free to reach out.
 
-- **GDN-based Anomaly Detection** (2025–2026)
-- **Smart Cargo & Order Management System** (OOP group project)
+More than anything, I think I want this blog to be a record of what I was thinking about at different points in my life.
 
----
+Most of what I write here will probably be reactions to things I consume: books, anime, music, films, software, articles, and whatever else catches my attention.
 
-## Profiles
+Some posts will be technical. Others won't.
 
-- LeetCode: https://leetcode.com/u/yusufyildizr  
-- HackerRank: https://hackerrank.com/yusufyildizr
+So, in a way, this is just a capitalism diary.
