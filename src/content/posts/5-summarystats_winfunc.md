@@ -7,7 +7,7 @@ tags:
   - Notes
 category: SQL
 draft: false
-language: en
+lang: en
 ---
 # 5 - PostgreSQL Summary Stats and Window Functions 
 

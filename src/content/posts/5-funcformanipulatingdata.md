@@ -7,7 +7,7 @@ tags:
   - Notes
 category: SQL
 draft: false
-language: en
+lang: en
 ---
 # 6 Veri Manipulasyonu
 
