@@ -7,7 +7,7 @@ tags:
   - Notes
 category: SQL
 draft: false
-language: en
+lang: en
 ---
 
 - **SQL (Structured Query Language):** İlişkisel veritabanlarında verileri sorgulamak, yönetmek ve manipüle etmek için kullanılan bir programlama dilidir.

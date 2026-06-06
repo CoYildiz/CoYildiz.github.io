@@ -7,7 +7,7 @@ tags:
   - Notes
 category: Learning
 draft: false
-language: en
+lang: en
 ---
 ## Environment Varibles
 

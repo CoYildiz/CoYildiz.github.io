@@ -7,7 +7,7 @@ tags:
   - Notes
 category: SQL
 draft: false
-language: en
+lang: en
 ---
 # 4 - Data Manipulation in SQL
 
