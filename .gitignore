@@ -32,6 +32,8 @@ yarn.lock
 
 src/.obsidian
 src/.backups
+src/.trash
+.vscode/
 
 src/content/posts/video.md
 src/content/posts/draft.md
