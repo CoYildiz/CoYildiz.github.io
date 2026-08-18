@@ -1,8 +1,14 @@
 {{- $params := .Site.Params -}}
+{{- $isAllPage := false -}}
+{{- with .File -}}{{- if in (slice "all.md" "all.tr.md") .Path -}}{{- $isAllPage = true -}}{{- end -}}{{- end -}}
 <div id="header-nav">
   <nav id="main-nav" aria-label="Primary navigation">
     {{- range .Site.Params.menu -}}
-      <a class="main-nav-link-wrap" href="{{ .url | relLangURL }}">
+      {{- $menuHref := .url | relLangURL -}}
+      {{- if and $isAllPage (eq .name "home") -}}
+        {{- $menuHref = "all/" | relLangURL -}}
+      {{- end -}}
+      <a class="main-nav-link-wrap" href="{{ $menuHref }}">
         {{- if ne .icon false -}}
           <div class='main-nav-icon icon {{ if or (and (eq .icon "e62b") ($params.icon_font)) (and (eq .icon "f6ad") (not $params.icon_font)) (not .icon) }}rotate{{ end }}'>
             {{- if .icon -}}
@@ -32,7 +38,7 @@
     {{- if .Site.Params.algolia_search.enable -}}
       <a id="nav-search-btn" class="nav-icon popup-trigger" title="{{ i18n "search" }}" aria-label="{{ i18n "search" }}"></a>
     {{- end -}}
-    <div class="custom-dropdown" id="hue-dropdown">
+    <div id="hue-dropdown" style="position:relative;display:inline-block;">
       <div
         id="hue-toggle-btn"
         role="button"
@@ -43,8 +49,8 @@
         aria-label="{{ i18n "accent_color" }}"
         style="display:inline-block;width:16px;height:16px;margin:0 10px;border-radius:50%;background:conic-gradient(red,yellow,lime,cyan,blue,magenta,red);cursor:pointer;vertical-align:middle;border:1px solid rgba(128,128,128,.4);"
       ></div>
-      <div id="hue-popup" class="select-items" style="padding:14px 16px;white-space:nowrap;">
-        <input type="range" id="hue-slider" min="0" max="360" step="1" value="0" style="width:150px;vertical-align:middle;" aria-label="{{ i18n "accent_color" }}">
+      <div id="hue-popup" style="display:none;position:absolute;top:100%;right:0;z-index:1000;margin-top:8px;padding:14px 16px;white-space:nowrap;background:var(--color-wrap, #272b30);border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,.4);">
+        <input type="range" id="hue-slider" min="0" max="360" step="1" value="250" style="width:150px;vertical-align:middle;" aria-label="{{ i18n "accent_color" }}">
       </div>
     </div>
     <script>
@@ -84,10 +90,15 @@
           applyHue(savedHue);
         }
 
-        hueToggleBtn.addEventListener("click", function () {
-          huePopup.classList.toggle("show");
-          var expanded = hueToggleBtn.getAttribute("aria-expanded") === "true";
-          hueToggleBtn.setAttribute("aria-expanded", (!expanded).toString());
+        hueToggleBtn.addEventListener("click", function (event) {
+          event.stopPropagation();
+          var isOpen = huePopup.style.display === "block";
+          huePopup.style.display = isOpen ? "none" : "block";
+          hueToggleBtn.setAttribute("aria-expanded", (!isOpen).toString());
+        });
+
+        huePopup.addEventListener("click", function (event) {
+          event.stopPropagation();
         });
 
         hueSlider.addEventListener("input", function () {
@@ -95,11 +106,9 @@
           localStorage.setItem("accent_hue", hueSlider.value);
         });
 
-        document.addEventListener("click", function (event) {
-          if (!event.target.closest("#hue-dropdown")) {
-            huePopup.classList.remove("show");
-            hueToggleBtn.setAttribute("aria-expanded", "false");
-          }
+        document.addEventListener("click", function () {
+          huePopup.style.display = "none";
+          hueToggleBtn.setAttribute("aria-expanded", "false");
         });
 
         new MutationObserver(function () {
@@ -127,8 +136,6 @@
               <li data-value="{{ .Lang }}" role="option" {{ if eq $.Language .Site.Language }}class="selected" aria-selected="true"{{ else }}aria-selected="false"{{ end }} >{{ .Site.Language.Label }}</li>
             {{- end -}}
           {{- end -}}
-          {{- $isAllPage := false -}}
-          {{- with .File -}}{{- if in (slice "all.md" "all.tr.md") .Path -}}{{- $isAllPage = true -}}{{- end -}}{{- end -}}
           <li data-value="all" role="option" {{ if $isAllPage }}class="selected" aria-selected="true"{{ else }}aria-selected="false"{{ end }}>{{ i18n "both" }}</li>
         </ul>
       </div>
@@ -214,26 +221,10 @@
         <picture></picture>
         <img style="visibility:hidden"></img>
       {{- else -}}
-        <picture>
-          {{- if .Site.Params.banner_srcset.enable -}}
-            {{- range .Site.Params.banner_srcset.srcset -}}
-              {{- $media := .media -}}
-              {{- if reflect.IsSlice .src -}}
-                {{- range .src -}}
-                  <source media="{{ $media }}" srcset="{{ . | relURL }}">
-                {{- end -}}
-              {{- else -}}
-                <source media="{{ .media }}" srcset="{{ .src | relURL }}">
-              {{- end -}}
-            {{- end -}}
-            <img {{ if .Site.Params.material_theme.enable }}crossorigin="anonymous"{{ end }} fetchpriority="high" src="{{ .Site.Params.banner | relURL }}" alt="{{ .Title }}">
-          {{- end -}}
-        </picture>
-        {{- if .Site.Params.banner_srcset.enable -}}
-          <img alt="{{ .Title }}" style="visibility: hidden;">
-        {{- else -}}
-          <img {{ if .Site.Params.material_theme.enable }}crossorigin="anonymous"{{ end }} fetchpriority="high" src="{{ .Site.Params.banner | relURL }}" alt="{{ .Title }}">
-        {{- end -}}
+        {{- /* No per-post cover/banner set: skip the site-wide banner on posts
+               rather than repeating the same image on every article. */ -}}
+        <picture></picture>
+        <img style="visibility:hidden"></img>
       {{- end -}}
     {{- else -}}
       <picture>
