@@ -233,11 +233,9 @@ custom_font:
 font:
   enable: true
   article:
-    - Mulish
+    - Roboto
   code:
-    # - Ubuntu Mono
-    # - Source Code Pro
-    # - JetBrains Mono
+    - JetBrains Mono
 
 # Local FallBack Font
 local_font:
@@ -789,16 +787,16 @@ material_theme:
 
 internal_theme:
   light:
-    --red-0: '#ff0000'
-    --red-1: '#ff5252'
-    --red-2: '#ff7c7c'
-    --red-3: '#ffafaf'
-    --red-4: '#ffd0d0'
-    --red-5: '#ffecec'
-    --red-5-5: '#fff3f3'
-    --red-6: '#fff7f7'
-    --color-red-6-shadow: 'rgba(255, 78, 78, 0.6)'
-    --color-red-3-shadow: 'rgba(255, 78, 78, 0.3)'
+    --red-0: 'hsl(250, 100%, 50%)'
+    --red-1: 'hsl(250, 100%, 67%)'
+    --red-2: 'hsl(250, 100%, 75%)'
+    --red-3: 'hsl(250, 100%, 84%)'
+    --red-4: 'hsl(250, 100%, 90%)'
+    --red-5: 'hsl(250, 100%, 96%)'
+    --red-5-5: 'hsl(250, 100%, 97.6%)'
+    --red-6: 'hsl(250, 100%, 98.4%)'
+    --color-red-6-shadow: 'hsla(250, 100%, 65%, 0.6)'
+    --color-red-3-shadow: 'hsla(250, 100%, 65%, 0.3)'
 
     --highlight-nav: "#f5f5f5"
     --highlight-scrollbar: "#d6d6d6"
@@ -818,10 +816,10 @@ internal_theme:
     --highlight-addition: "#22863a"
     --highlight-addition-bg: "#f0fff4"
   dark:
-    --red-4: 'rgba(255, 208, 208, 0.5)'
-    --red-5: 'rgba(255,228,228,0.15)'
-    --red-5-5: 'rgba(255,236,236,0.05)'
-    --red-6: 'rgba(255, 243, 243, 0.2)'
+    --red-4: 'hsla(250, 100%, 91%, 0.5)'
+    --red-5: 'hsla(250, 100%, 95%, 0.15)'
+    --red-5-5: 'hsla(250, 100%, 96%, 0.05)'
+    --red-6: 'hsla(250, 100%, 98%, 0.2)'
 
     --highlight-nav: "#222830"
     --highlight-scrollbar: "#454d59"

@@ -1,6 +1,14 @@
 <style>
   html { background: #fdfdfd; }
   @media (prefers-color-scheme: dark) { html { background: #1e2027; } }
+  /* The theme's loader.scss hardcodes a white overlay background and only
+     switches to a dark one once JS sets data-theme="dark" on <html>, which
+     happens after first paint. Override it with a pure-CSS media query so
+     the loader itself never flashes white on a dark-preferring system. */
+  #loader .loading-bg { background-color: rgba(255, 255, 255, 0.9) !important; }
+  @media (prefers-color-scheme: dark) {
+    #loader .loading-bg { background-color: rgba(37, 37, 37, 0.9) !important; }
+  }
 </style>
 {{- $version := int (index (split hugo.Version ".") 1) -}}
 {{- if lt $version 158 -}}
