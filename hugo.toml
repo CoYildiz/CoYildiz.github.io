@@ -1,0 +1,26 @@
+baseURL = "https://CoYildiz.github.io/"
+languageCode = "en"
+title = "CoYildiz"
+theme = ["reimu"]
+
+defaultContentLanguage = "en"
+enableRobotsTXT = true
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    languageCode = "en"
+    weight = 1
+  [languages.tr]
+    languageName = "Türkçe"
+    languageCode = "tr"
+    weight = 2
+
+[markup]
+  [markup.highlight]
+    guessSyntax = true
+    noClasses = false
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        title = true
