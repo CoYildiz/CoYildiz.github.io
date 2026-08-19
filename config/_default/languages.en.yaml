@@ -1,7 +1,0 @@
-params:
-  home_categories:
-    content:
-      - categories: Learning
-        cover:
-      - categories: Personal Blog
-        cover:
