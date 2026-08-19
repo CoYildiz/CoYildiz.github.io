@@ -1,7 +1,0 @@
-params:
-  home_categories:
-    content:
-      - categories: SQL
-        cover:
-      - categories: Notes
-        cover:
