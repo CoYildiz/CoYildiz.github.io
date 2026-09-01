@@ -1,6 +1,6 @@
 # About
 
-Hi, I'm Yusuf.
+Hi, I'm CwithO.
 
 I'm a Mathematical Engineering student who enjoys learning about software, AI, and technology.
 
