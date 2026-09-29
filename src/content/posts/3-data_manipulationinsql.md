@@ -1,13 +1,13 @@
 ---
-title: SQL Notlarım 3
+title: "SQL Notlarım 3 · Data Manipulation"
 published: 2026-06-01
-description: Data Manipulation in SQL
+description: "Koşullu mantık (CASE), alt sorgular ve veriyi sorgu içinde dönüştürme."
 tags:
   - SQL
-  - Notes
-category: SQL
+  - PostgreSQL
+category: Notes
 draft: false
-lang: en
+lang: tr
 ---
 # 4 - Data Manipulation in SQL
 

@@ -1,11 +1,11 @@
 ---
-title: Linux Commands - 1
+title: "Linux Commands 1 · Files and Navigation"
 published: 2026-06-02
-description: CIL notes
+description: "Everyday terminal commands: viewing, copying, removing files and symbolic links."
 tags:
-  - CIL_commands
-  - Notes
-category: Learning
+  - Linux
+  - CLI
+category: Notes
 draft: false
 lang: en
 ---

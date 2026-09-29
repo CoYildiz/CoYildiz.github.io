@@ -1,13 +1,13 @@
 ---
-title: SQL Notlarım 4
+title: "SQL Notlarım 4 · Summary Stats ve Window Functions"
 published: 2026-06-01
-description: PostgreSQL Summary Stats and Window Functions
+description: "Özet istatistikler ve pencere fonksiyonlarıyla satır bağlamını kaybetmeden hesaplama."
 tags:
   - SQL
-  - Notes
-category: SQL
+  - PostgreSQL
+category: Notes
 draft: false
-lang: en
+lang: tr
 ---
 # 5 - PostgreSQL Summary Stats and Window Functions 
 

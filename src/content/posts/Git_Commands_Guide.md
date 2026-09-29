@@ -1,11 +1,11 @@
 ---
-title: Git Commands - Guide
+title: "Git Commands Guide"
 published: 2026-06-09
-description: A comprehensive guide to Git commands and concepts with real-world examples
+description: "A reference of the Git commands I actually use, grouped by what they are for."
 tags:
-  - Notes
-  - Git_commands
-category: Learning
+  - Git
+  - CLI
+category: Notes
 draft: false
 lang: en
 ---

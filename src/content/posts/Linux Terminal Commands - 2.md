@@ -1,11 +1,11 @@
 ---
-title: Linux Commands - 2
+title: "Linux Commands 2"
 published: 2026-06-05
-description: CIL notes
+description: "Continued terminal notes: permissions, processes and text processing."
 tags:
-  - CIL_commands
-  - Notes
-category: Learning
+  - Linux
+  - CLI
+category: Notes
 draft: false
 lang: en
 ---

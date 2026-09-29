@@ -1,13 +1,13 @@
 ---
-title: SQL Notlarım 5
+title: "SQL Notlarım 5 · Veri Manipülasyon Fonksiyonları"
 published: 2026-06-01
-description: Veri Manipulasyonu
+description: "Tarih, metin ve tip dönüşümü fonksiyonlarıyla veriyi biçimlendirme."
 tags:
   - SQL
-  - Notes
-category: SQL
+  - PostgreSQL
+category: Notes
 draft: false
-lang: en
+lang: tr
 ---
 # 6 Veri Manipulasyonu
 

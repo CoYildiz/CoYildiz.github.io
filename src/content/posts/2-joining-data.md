@@ -1,13 +1,13 @@
 ---
-title: SQL Notlarım 2
+title: "SQL Notlarım 2 · Joining Data"
 published: 2026-06-01
-description: Joining Data
+description: "Veritabanı temelleri, ilişki türleri ve tabloları birleştirmenin yolları."
 tags:
   - SQL
-  - Notes
-category: SQL
+  - PostgreSQL
+category: Notes
 draft: false
-lang: en
+lang: tr
 ---
 # 3 - Joining Data
 

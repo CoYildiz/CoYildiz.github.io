@@ -1,10 +1,10 @@
 ---
-title: DSA Notlarım
+title: "DSA Notlarım"
 published: 2026-07-22
-description: Joining Data
+description: "Big-O notasyonundan başlayıp diziler, bağlı listeler ve temel algoritmalara giden veri yapıları notları."
 tags:
-  - Notes
   - DSA
+  - Algoritmalar
 category: Notes
 draft: false
 lang: tr

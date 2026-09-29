@@ -3,9 +3,9 @@ title: My First Attempt at a Non-Technical Blog and Why It Failed
 published: 2026-06-10
 description: A personal reflection on why I struggled to write my first non-technical blog post and what I learned from the process.
 tags:
-  - self-improvement
   - Blogging
-category: Personal Blog
+  - Writing
+category: Blog
 draft: false
 lang: en
 ---

@@ -1,13 +1,13 @@
 ---
-title: SQL Notlarım 1
+title: "SQL Notlarım 1 · Temeller ve İlk Sorgular"
 published: 2026-06-01
-description: PostgreSQL notlarım
+description: "PostgreSQL'e giriş: temel sorgu yapısı ve bu işlemlerin nerede kullanıldığı."
 tags:
   - SQL
-  - Notes
-category: SQL
+  - PostgreSQL
+category: Notes
 draft: false
-lang: en
+lang: tr
 ---
 
 - **SQL (Structured Query Language):** İlişkisel veritabanlarında verileri sorgulamak, yönetmek ve manipüle etmek için kullanılan bir programlama dilidir.
