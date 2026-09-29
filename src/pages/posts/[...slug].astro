@@ -5,7 +5,7 @@ import Markdown from "@components/misc/Markdown.astro";
 import I18nKey from "@i18n/i18nKey";
 import { i18n } from "@i18n/translation";
 import MainGridLayout from "@layouts/MainGridLayout.astro";
-import { getAllPostsForRouting } from "@utils/content-utils";
+import { SERIES_CATEGORY, getAllPostsForRouting } from "@utils/content-utils";
 import { getDir, getPostUrlBySlug } from "@utils/url-utils";
 import { Icon } from "astro-icon/components";
 import { licenseConfig } from "src/config";
@@ -106,6 +106,20 @@ const jsonLd = {
             <Markdown class="mb-6 markdown-content onload-animation">
                 <Content />
             </Markdown>
+
+            {entry.data.category === SERIES_CATEGORY && (
+                <div class="onload-animation mb-6 rounded-xl bg-[var(--license-block-bg)] py-5 px-6">
+                    <div class="font-bold text-black/75 dark:text-white/75 mb-2">Bir hata mı buldun?</div>
+                    <div class="text-black/50 dark:text-white/50 text-sm leading-relaxed">
+                        Bu notlar yapay zeka ile tartışılarak derlendi ve hata içerebilir — nitekim
+                        sonradan yapılan bir doğruluk taramasında yedi yanlış iddia bulunup düzeltildi.
+                        Yanlış ya da eksik bir şey görürsen
+                        <a href="https://github.com/CoYildiz/yz50/issues/new" target="_blank" rel="noopener"
+                           class="text-[var(--primary)] font-medium hover:opacity-80 transition">issue aç</a>,
+                        düzeltip notu güncelleyeyim.
+                    </div>
+                </div>
+            )}
 
             {licenseConfig.enable && <License title={entry.data.title} slug={entry.slug} pubDate={entry.data.published} class="mb-6 rounded-xl license-container onload-animation"></License>}
 
