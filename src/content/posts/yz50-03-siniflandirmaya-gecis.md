@@ -1,12 +1,12 @@
 ---
-title: "Sınıflandırmaya Geçiş — Lineer Regresyonun Sınırı ve Sigmoid"
+title: "03 · Sınıflandırmaya Geçiş — Sigmoid"
 published: 2026-09-29
 description: "Regresyon neden sınıflandırmada çuvallıyor: accuracy'nin optimize edilemeyeceğinin ispatı, MSE'nin elenme gerekçesi ve confusion matrix okuma."
 tags:
   - YZ50
   - Sınıflandırma
   - Sigmoid
-category: YZ50
+category: ML
 draft: false
 lang: tr
 ---
@@ -24,8 +24,8 @@ A Discern Machine**. Dersler: *Linear Regression Limitation* → *Invasion of th
 *Update the Gradient* → *Classification in Action* → *Playground (Weighty Decisions)*.
 Bu kurs Paolo Perrotta'nın *Programming Machine Learning* kitabının Educative sürümü.
 
-Önceki notlar: [01-lineer-regresyon](/posts/yz50-01-lineer-regresyon/),
-[02-hiperuzay](/posts/yz50-02-hiperuzay-cok-degiskenli-regresyon/).
+Önceki notlar: [01 · Lineer Regresyon](/posts/yz50-01-lineer-regresyon/),
+[02 · Hiperuzay ve Matrix Gradient](/posts/yz50-02-hiperuzay-cok-degiskenli-regresyon/).
 
 > **Durum:** *Invasion of the Sigmoids* dersi okundu ve not o dersin içeriğiyle **doğrulandı**
 > (2026-09-19). *Linear Regression Limitation*, *Update the Gradient* ve *Classification in Action*
@@ -75,7 +75,7 @@ doğru bildiği bir örnek daha uzağa gitti.
 
 **0.5 eşiği keyfi.** Çıktı bir probability değilse, hangi sayıda keseceğin modele değil sana bağlı
 kalıyor. Probability yorumu olmadan "bu tahminden ne kadar eminim" sorusunun cevabı yok
-(bkz. [05-ag-analizi](/posts/yz50-05-ag-analizi-ve-sinirlari/) — eğitilmiş ağın gürültüye yüksek güvenle
+(bkz. [05 · Ağ Analizi ve Sınırları](/posts/yz50-05-ag-analizi-ve-sinirlari/) — eğitilmiş ağın gürültüye yüksek güvenle
 yanlış cevap vermesi, aynı kalibrasyon sorunu).
 
 ---
@@ -123,7 +123,7 @@ değişmesi, gradient descent'in üzerinde kayabileceği bir yüzey demek. Sın�
 **kesin** cevap gerekiyor, çünkü etiketler zaten 0 veya 1. Aynı model, iki farklı okuma biçimi.
 
 Sigmoid'in kendi davranışı, derivative'i ve `tanh`/ReLU ile karşılaştırması ayrı notta:
-[13-aktivasyon-fonksiyonlari](/posts/yz50-13-aktivasyon-fonksiyonlari/).
+[13 · Sigmoid vs Tanh vs ReLU](/posts/yz50-13-aktivasyon-fonksiyonlari/).
 
 ---
 
@@ -152,7 +152,7 @@ ailenin iki yüzü — biri eğimi sıfırlıyor, diğeri yanlış yere hapsediy
 yerel minimumlar **ve** doygunlukta ölen gradient. İkincisi doğru bir olgu ama **bu dersin argümanı
 değil**; Perrotta onu burada hiç kullanmıyor. Saturasyon tartışması kursta çok sonra, **Bölüm 19
 (*Beyond the Sigmoid*)** geliyor. Senin notlarında zaten var:
-[13-aktivasyon-fonksiyonlari](/posts/yz50-13-aktivasyon-fonksiyonlari/). Karıştırma — bu derste öğrenilen
+[13 · Sigmoid vs Tanh vs ReLU](/posts/yz50-13-aktivasyon-fonksiyonlari/). Karıştırma — bu derste öğrenilen
 şey yüzey argümanı.
 
 **Çözüm: log loss.**
@@ -169,7 +169,7 @@ iki satır.
 Bunun loss yüzeyi de çizdiriliyor: **kanyon yok, düzlük yok, çukur yok.**
 
 Loss ailelerinin karşılaştırması ve NLL (Negative Log Likelihood)'in istatistiksel anlamı:
-[16-loss-nll-cross-entropy](/posts/yz50-16-loss-nll-cross-entropy/). Oradaki "ortalama NLL" ile buradaki
+[16 · Loss, NLL ve Cross-Entropy](/posts/yz50-16-loss-nll-cross-entropy/). Oradaki "ortalama NLL" ile buradaki
 log loss aynı şey — biri ikili, diğeri çok sınıflı hali.
 
 ### Gözden kaçmaması gereken bir gerilim
@@ -202,7 +202,7 @@ baştaki `2` düşüyor. Değişen tek şey `predict()` yerine `forward()` çağ
 
 > **Perrotta bu ifadeyi türetmiyor** — "here is the partial derivative ... from the math textbooks"
 > diyip alıntılıyor. Sadeleşmenin tam ispatı senin kendi notunda:
-> [15-aktivasyon-loss-eslesmesi](/posts/yz50-15-aktivasyon-loss-eslesmesi/) bölüm 1 — sigmoid'in derivative'indeki
+> [15 · Aktivasyon + Loss Eşleşmesi](/posts/yz50-15-aktivasyon-loss-eslesmesi/) bölüm 1 — sigmoid'in derivative'indeki
 > `ŷ(1-ŷ)` ile log loss'un derivative'indeki `1/(ŷ(1-ŷ))` birebir sadeleşiyor, geriye `(ŷ - y)` kalıyor.
 
 ### Dikkat: burada iki farklı MSE var, karıştırma *(2026-09-19'da takılınan nokta)*
@@ -240,7 +240,7 @@ regresyondaki temiz biçimi geri getiriyor.** Doğru eşleştirme yapıldığın
 | Çok sınıflı | softmax | cross-entropy | `ŷ - y` |
 
 Bunun adı **kanonik eşleşme (canonical link)**, çerçevesi GLM:
-[15-aktivasyon-loss-eslesmesi](/posts/yz50-15-aktivasyon-loss-eslesmesi/).
+[15 · Aktivasyon + Loss Eşleşmesi](/posts/yz50-15-aktivasyon-loss-eslesmesi/).
 
 Üçüncü satır YZ50 Hafta 5'in işi — `dlogits` tam olarak bu. Karpathy'nin "bütün o zincir tek
 satıra iniyor" dediği şey, bu tablonun çok sınıflı hali.
@@ -505,7 +505,7 @@ formüle girmiyor. Reddetmedik — **kullanılabilir değildi.**
   söndürüyor hem yüzeyi konveks olmaktan çıkarıyor
 
 Peki loss'u kim seçiyor, neden bu ikisi? →
-[16-loss-nll-cross-entropy](/posts/yz50-16-loss-nll-cross-entropy/), "Loss nereden geliyor" bölümü.
+[16 · Loss, NLL ve Cross-Entropy](/posts/yz50-16-loss-nll-cross-entropy/), "Loss nereden geliyor" bölümü.
 
 ## 7c. Accuracy ölçerken de yanıltıcı — MNIST deneyi
 
@@ -645,7 +645,7 @@ Dersin "insan sezgisi 7 ve 4 zor olur der, yanlış" gözleminin sebebi bu: doğ
 önemli olan **el yazısı çeşitliliği** değil, **diğer sınıflarla piksel örtüşmesi.** İnsan sezgisi
 birinciye bakıyor, model ikinciye takılıyor.
 
-Bu, [05-ag-analizi](/posts/yz50-05-ag-analizi-ve-sinirlari/)'deki "weight'ler beklediğin özellik dedektörü
+Bu, [05 · Ağ Analizi ve Sınırları](/posts/yz50-05-ag-analizi-ve-sinirlari/)'deki "weight'ler beklediğin özellik dedektörü
 gibi davranmıyor" gözleminin tek layer'lı hali. Aşmanın yolu layer eklemek (kursta Bölüm 8-11)
 ve sonunda komşuluğu modele öğretmek (CNN, Bölüm 20).
 
@@ -692,15 +692,15 @@ Bölümü bitirdiğinde bu beşini kendi cümlelerinle cevaplayabiliyor olmalıs
 
 ## İlgili notlar
 
-- [01-lineer-regresyon](/posts/yz50-01-lineer-regresyon/) — bu bölümün kırdığı model; MSE'nin Gauss gürültü
+- [01 · Lineer Regresyon](/posts/yz50-01-lineer-regresyon/) — bu bölümün kırdığı model; MSE'nin Gauss gürültü
   altında MLE olması, sınıflandırmada bu gerekçenin neden düştüğü
-- [02-hiperuzay](/posts/yz50-02-hiperuzay-cok-degiskenli-regresyon/) — bias hilesi, matrix gradient'i ve
+- [02 · Hiperuzay ve Matrix Gradient](/posts/yz50-02-hiperuzay-cok-degiskenli-regresyon/) — bias hilesi, matrix gradient'i ve
   karar sınırının geometrisi; gradient biçiminin neden değişmediğinin zemini
-- [13-aktivasyon-fonksiyonlari](/posts/yz50-13-aktivasyon-fonksiyonlari/) — sigmoid'in derivative'i, saturasyon,
+- [13 · Sigmoid vs Tanh vs ReLU](/posts/yz50-13-aktivasyon-fonksiyonlari/) — sigmoid'in derivative'i, saturasyon,
   tanh/ReLU karşılaştırması
-- [15-aktivasyon-loss-eslesmesi](/posts/yz50-15-aktivasyon-loss-eslesmesi/) — **sigmoid + log loss
+- [15 · Aktivasyon + Loss Eşleşmesi](/posts/yz50-15-aktivasyon-loss-eslesmesi/) — **sigmoid + log loss
   sadeleşmesinin tam ispatı**; bu bölümün "Update the Gradient" dersinin arkasındaki matematik
-- [16-loss-nll-cross-entropy](/posts/yz50-16-loss-nll-cross-entropy/) — loss aileleri, NLL'in istatistiksel
+- [16 · Loss, NLL ve Cross-Entropy](/posts/yz50-16-loss-nll-cross-entropy/) — loss aileleri, NLL'in istatistiksel
   karşılığı, çok sınıflı hale genişleme
 
 ## Kursta sırada ne var

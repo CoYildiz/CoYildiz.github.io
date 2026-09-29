@@ -1,11 +1,11 @@
 ---
-title: "Hafta 2 — Backpropagation Sezgisi (3Blue1Brown, 'What is backpropagation really doing?')"
+title: "11 · Backpropagation Sezgisi"
 published: 2026-09-29
 description: "Backpropagation'ın sezgisi: her eğitim örneğinin weight'lerden ne istediği, bu isteklerin nasıl toplandığı ve neden 'geriye' gidiyoruz."
 tags:
   - YZ50
   - Backpropagation
-category: YZ50
+category: ML
 draft: false
 lang: tr
 ---
@@ -18,7 +18,7 @@ lang: tr
 > taramasında yedi yanlış iddia bulunup düzeltildi. Kritik bir şeyi buradan alıp
 > kullanmadan önce birincil kaynaktan doğrula.
 
-Kaynak: [3blue1brown.com/lessons/backpropagation](https://www.3blue1brown.com/lessons/backpropagation), orijinal video [YouTube'da](https://www.youtube.com/watch?v=Ilg3gGewQ5U). **Bu, YZ50 Hafta 2'nin kendi kaynak listesindeki 3. madde** — resmi, atanmış materyal. Önceki: [Ağ analizi ara bölümü](/posts/yz50-05-ag-analizi-ve-sinirlari/). Sonraki: [Backprop calculus](/posts/yz50-12-backpropagation-calculus/) (kesin matematik).
+Kaynak: [3blue1brown.com/lessons/backpropagation](https://www.3blue1brown.com/lessons/backpropagation), orijinal video [YouTube'da](https://www.youtube.com/watch?v=Ilg3gGewQ5U). **Bu, YZ50 Hafta 2'nin kendi kaynak listesindeki 3. madde** — resmi, atanmış materyal. Önceki: [05 · Ağ Analizi ve Sınırları](/posts/yz50-05-ag-analizi-ve-sinirlari/). Sonraki: [12 · Backpropagation Calculus](/posts/yz50-12-backpropagation-calculus/) (kesin matematik).
 
 ---
 
@@ -86,4 +86,4 @@ Bu sezgisel anlatım, Nielsen'in kitabındaki (zaten okuduğun) kodun mantığı
 
 Bu 3 kaldıraç (bias/weight/prev-activation), senin `Value`/`Neuron`'unun `backward()` metodunun **tam olarak yapması gereken şey** — her `Value` node'u kendi yerel derivative'ini hesaplayıp üstten gelen gradientla çarpıyor, tıpkı burada "her nöronun kendi payına düşen nudge'ı hesaplayıp bir önceki layer'a iletmesi" gibi.
 
-**Bağlantılı:** [Hafta 1 / 3Blue1Brown Ara Bölüm — Analyzing Our Neural Network](/posts/yz50-05-ag-analizi-ve-sinirlari/) · [Hafta 2 — Backpropagation Calculus (3Blue1Brown, kesin matematik)](/posts/yz50-12-backpropagation-calculus/)
+**Bağlantılı:** [05 · Ağ Analizi ve Sınırları](/posts/yz50-05-ag-analizi-ve-sinirlari/) · [12 · Backpropagation Calculus](/posts/yz50-12-backpropagation-calculus/)

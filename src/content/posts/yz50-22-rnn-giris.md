@@ -1,11 +1,11 @@
 ---
-title: "RNN (Recurrent Neural Network) — Giriş"
+title: "22 · RNN'e Giriş"
 published: 2026-09-29
 description: "RNN'in tekrarlayan yapısı, gizli durumun taşıdığı bilgi ve 'RNN Turing complete' iddiasının hangi iki koşula bağlı olduğu."
 tags:
   - YZ50
   - RNN
-category: YZ50
+category: ML
 draft: false
 lang: tr
 ---
@@ -149,4 +149,4 @@ ve aynı uyarıyı taşıyor: **"teorik olarak yapabilir", "pratikte öğrenir" 
 
 **Kapsam notu:** Bu not RNN ailesinin genel haritasını çıkarıyor; gate mekanizmalarının matematiği, Hopfield ve echo state ağları, ikinci dereceden ve hiyerarşik varyantlar kapsam dışı bırakıldı.
 
-**Bağlantılı:** [Hafta 2 — Aktivasyon Fonksiyonları: Sigmoid vs Tanh vs ReLU](/posts/yz50-13-aktivasyon-fonksiyonlari/)
+**Bağlantılı:** [13 · Sigmoid vs Tanh vs ReLU](/posts/yz50-13-aktivasyon-fonksiyonlari/)

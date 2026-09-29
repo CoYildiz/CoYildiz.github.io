@@ -1,11 +1,11 @@
 ---
-title: "Hafta 2 — Aktivasyon Fonksiyonları: Sigmoid vs Tanh vs ReLU"
+title: "13 · Sigmoid vs Tanh vs ReLU"
 published: 2026-09-29
 description: "Sigmoid, tanh ve ReLU'nun türevleri, doygunluk davranışı ve 'tanh her zaman daha güçlü' iddiasının nerede bozulduğu (x≈1.663)."
 tags:
   - YZ50
   - Aktivasyon
-category: YZ50
+category: ML
 draft: false
 lang: tr
 ---

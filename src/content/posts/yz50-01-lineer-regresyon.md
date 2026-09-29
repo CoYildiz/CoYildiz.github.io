@@ -1,12 +1,12 @@
 ---
-title: "Lineer Regresyon"
+title: "01 · Lineer Regresyon"
 published: 2026-09-29
 description: "İki parametreli en küçük modelden başlayıp loss, gradient ve öğrenme oranının nereden geldiğini türetiyoruz. Learning rate'in üst sınırı neden 2/L?"
 tags:
   - YZ50
   - Lineer Regresyon
   - Optimizasyon
-category: YZ50
+category: ML
 draft: false
 lang: tr
 ---
@@ -177,9 +177,9 @@ sondaj yapmak.
 **Bu problem çözülüyor, ama burada değil.** Çözümün adı **backpropagation**: chain rule'u ağın
 grafiği üzerinde ters yönde uygulayıp bütün partial derivative'leri **tek bir geri geçişte** almak.
 Maliyet parametre sayısından bağımsız hale geliyor. Nasıl yapıldığı
-[11-backpropagation-sezgisi](/posts/yz50-11-backpropagation-sezgisi/) ve
-[12-backpropagation-calculus](/posts/yz50-12-backpropagation-calculus/)'ta; elle kurulmuş hali
-[24-tekrar-micrograd-muhasebesi](/posts/yz50-24-tekrar-micrograd-muhasebesi/)'nde.
+[11 · Backpropagation Sezgisi](/posts/yz50-11-backpropagation-sezgisi/) ve
+[12 · Backpropagation Calculus](/posts/yz50-12-backpropagation-calculus/) notunda; elle kurulmuş hali
+[24 · Genel Tekrar — micrograd muhasebesi](/posts/yz50-24-tekrar-micrograd-muhasebesi/) notunda.
 
 ![Koordinat araması parametre sayısıyla ölçeklenmiyor](/yz50/koordinat-aramasi-olceklenmiyor.png)
 
@@ -237,7 +237,7 @@ $$\mathbf{w} = (X^\top X)^{-1} X^\top \mathbf{y}$$
    aşkın (transandantal) hem de çok bilinmeyenli hale geliyor ve **kapalı bir çözümü yok** —
    polinom denklemlerinde beşinci dereceden sonra kök formülü olmamasıyla (Abel-Ruffini) aynı
    türden bir imkânsızlık, detayı
-   [07-neden-gradient-descent](/posts/yz50-07-neden-gradient-descent/)'te.
+   [07 · Neden Gradient Descent?](/posts/yz50-07-neden-gradient-descent/) notunda.
 
    **Bu problem nasıl aşılıyor:** kapalı çözüm aranmaktan vazgeçilip **iteratif** çözüme
    geçiliyor. Denklemi çözmek yerine minimuma adım adım yaklaşıyorsun — gradient descent tam
@@ -466,7 +466,7 @@ dokunuyor.
 **Ve zincir derin ağda bitmiyor, orada tekrar başlıyor:** girdiyi bir kez standartlaştırmak
 yetmiyor, çünkü her layer'ın çıktısı bir sonrakinin girdisi ve ölçek layer layer kayıyor. Kaiming
 init ve BatchNorm, yukarıdaki 4. adımı ağın **içinde tekrar tekrar** yapan tekniklerin adı —
-[14-kaiming-init-ve-batchnorm](/posts/yz50-14-kaiming-init-ve-batchnorm/).
+[14 · Kaiming Init ve BatchNorm](/posts/yz50-14-kaiming-init-ve-batchnorm/).
 
 ### 4.3 Neden böyle bir koşul **var**
 
@@ -576,7 +576,7 @@ layer kayıyor:
 - **BatchNorm** — her layer'ın çıktısını eğitim boyunca yeniden normalize etmek. Yani koşullanmayı
   **sürekli** düzeltmek
 
-İkisi de [13-aktivasyon-fonksiyonlari](/posts/yz50-13-aktivasyon-fonksiyonlari/) ve YZ50 Hafta 4'ün konusu.
+İkisi de [13 · Sigmoid vs Tanh vs ReLU](/posts/yz50-13-aktivasyon-fonksiyonlari/) ve YZ50 Hafta 4'ün konusu.
 Fark şu: burada eigenvalue'ları yazıp $\kappa = 825.9$ diye görebiliyorsun; orada matrix çok büyük
 olduğu için göremiyorsun, ama olan şey aynı.
 
@@ -598,7 +598,7 @@ MSE tek seçenek değil, sadece kapalı formu olan seçenek:
 
 Bu veride tek bir noktayı 75 pizza yukarı taşımak MSE'nin eğimini 1.081'den 1.695'e kaydırıyor;
 MAE ve Huber neredeyse hiç oynamıyor. Detay ve ölçümler:
-[17-mae-huber-loss](/posts/yz50-17-mae-huber-loss/).
+[17 · MAE'nin Köşesi ve Huber Loss](/posts/yz50-17-mae-huber-loss/).
 
 ---
 
@@ -619,7 +619,7 @@ Bu durumda **OLS** (Ordinary Least Squares — sıradan en küçük kareler; bu 
 kapalı form çözümünün adı) aynı zamanda istatistiğin "en iyi" dediği tahmin oluyor.
 
 Aynı desen sigmoid+log loss ve softmax+cross-entropy için de geçerli — üçü tek bir teoremin
-örnekleri (detayı [16-loss-nll-cross-entropy](/posts/yz50-16-loss-nll-cross-entropy/)'de).
+örnekleri (detayı [16 · Loss, NLL ve Cross-Entropy](/posts/yz50-16-loss-nll-cross-entropy/) notunda).
 
 ### Modelin ne kadar iyi olduğunu tek sayıyla söylemek
 
@@ -673,8 +673,8 @@ değerlerle ilişkisi. Değişen tek şey, kapalı form çözümün ortadan kalk
 
 ## İlgili notlar
 
-- [04-sinir-agi-nedir](/posts/yz50-04-sinir-agi-nedir/) — aynı yapının aktivasyonlu hali
-- [06-gradient-descent](/posts/yz50-06-gradient-descent/) — gradient sezgisi ve numerical derivative'in sınırları
-- [07-neden-gradient-descent](/posts/yz50-07-neden-gradient-descent/) — kapalı form neden genel çözüm değil
-- [15-aktivasyon-loss-eslesmesi](/posts/yz50-15-aktivasyon-loss-eslesmesi/) — MSE'nin GLM'deki yeri
-- [17-mae-huber-loss](/posts/yz50-17-mae-huber-loss/) — MSE dışındaki loss'lar ve aykırı değerler
+- [04 · Sinir Ağı Nedir?](/posts/yz50-04-sinir-agi-nedir/) — aynı yapının aktivasyonlu hali
+- [06 · Gradient Descent](/posts/yz50-06-gradient-descent/) — gradient sezgisi ve numerical derivative'in sınırları
+- [07 · Neden Gradient Descent?](/posts/yz50-07-neden-gradient-descent/) — kapalı form neden genel çözüm değil
+- [15 · Aktivasyon + Loss Eşleşmesi](/posts/yz50-15-aktivasyon-loss-eslesmesi/) — MSE'nin GLM'deki yeri
+- [17 · MAE'nin Köşesi ve Huber Loss](/posts/yz50-17-mae-huber-loss/) — MSE dışındaki loss'lar ve aykırı değerler

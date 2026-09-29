@@ -17,19 +17,57 @@ async function getRawSortedPosts() {
 	return sorted;
 }
 
+// Seri kategorisi: bu kategorideki yazilar ana akistan ve arsivden cikarilir,
+// kendi seri sayfalarinda (/ml) numara sirasiyla listelenir.
+export const SERIES_CATEGORY = "ML";
+
+function isSeriesPost(data: { category?: string | null }): boolean {
+	return (data.category ?? "").trim() === SERIES_CATEGORY;
+}
+
+// Slug'daki iki haneli sira numarasi: "yz50-07-neden-..." -> 7
+function seriesOrder(slug: string): number {
+	const m = slug.match(/(?:^|-)(\d{2})-/);
+	return m ? Number.parseInt(m[1], 10) : Number.MAX_SAFE_INTEGER;
+}
+
+// Ileri/geri gezinme baglantilarini verilen liste icinde zincirler.
+function linkNeighbours(list: CollectionEntry<"posts">[]) {
+	for (let i = 1; i < list.length; i++) {
+		list[i].data.nextSlug = list[i - 1].slug;
+		list[i].data.nextTitle = list[i - 1].data.title;
+	}
+	for (let i = 0; i < list.length - 1; i++) {
+		list[i].data.prevSlug = list[i + 1].slug;
+		list[i].data.prevTitle = list[i + 1].data.title;
+	}
+	return list;
+}
+
+// Ana akis ve RSS: seri yazilari haric, tarihe gore yeniden eskiye.
 export async function getSortedPosts() {
-	const sorted = await getRawSortedPosts();
+	const sorted = (await getRawSortedPosts()).filter(
+		(post) => !isSeriesPost(post.data),
+	);
+	return linkNeighbours(sorted);
+}
 
-	for (let i = 1; i < sorted.length; i++) {
-		sorted[i].data.nextSlug = sorted[i - 1].slug;
-		sorted[i].data.nextTitle = sorted[i - 1].data.title;
-	}
-	for (let i = 0; i < sorted.length - 1; i++) {
-		sorted[i].data.prevSlug = sorted[i + 1].slug;
-		sorted[i].data.prevTitle = sorted[i + 1].data.title;
-	}
+// Seri yazilari, numara sirasiyla (01 -> 24).
+export async function getSeriesPosts() {
+	const series = (await getRawSortedPosts())
+		.filter((post) => isSeriesPost(post.data))
+		.sort((a, b) => seriesOrder(a.slug) - seriesOrder(b.slug));
 
-	return sorted;
+	// Seri icinde "onceki" bir kucuk numara, "sonraki" bir buyuk numara olmali.
+	// linkNeighbours listeyi yeniden-eskiye varsaydigi icin ters cevirip veriyoruz.
+	linkNeighbours([...series].reverse());
+	return series;
+}
+
+// Butun yazilar: sayfa uretimi icin (her ikisi de kendi zincirini korur).
+export async function getAllPostsForRouting() {
+	const [blog, series] = await Promise.all([getSortedPosts(), getSeriesPosts()]);
+	return [...blog, ...series];
 }
 export type PostForList = {
 	slug: string;

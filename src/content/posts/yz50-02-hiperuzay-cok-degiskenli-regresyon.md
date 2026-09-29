@@ -1,12 +1,12 @@
 ---
-title: "Hiperuzay — Çok Değişkenli Regresyon ve Matrix Gradient'i"
+title: "02 · Hiperuzay ve Matrix Gradient"
 published: 2026-09-29
 description: "Tek girdiden çok girdiye geçiş: tasarım matrisi, bias trick, matrix formunda gradient ve kapalı form çözümün ne zaman iteratif yönteme yenildiği."
 tags:
   - YZ50
   - Lineer Regresyon
   - Matris
-category: YZ50
+category: ML
 draft: false
 lang: tr
 ---
@@ -23,7 +23,7 @@ Tek girdiden çok girdiye geçiş. Görünüşte küçük bir genelleme, pratikt
 değiştiriyor: kodun döngüden matrix çarpımına inmesi, gradient'in transpozla yazılması, ve özellik
 ölçeklerinin artık isteğe bağlı olmaktan çıkması.
 
-Devamı olduğu not: [01-lineer-regresyon](/posts/yz50-01-lineer-regresyon/).
+Devamı olduğu not: [01 · Lineer Regresyon](/posts/yz50-01-lineer-regresyon/).
 
 ---
 
@@ -266,11 +266,11 @@ buradaki şekil disiplini, oradaki forward pass'in okunabilmesi demek.
 
 ## İlgili notlar
 
-- [01-lineer-regresyon](/posts/yz50-01-lineer-regresyon/) — tek değişkenli hali, normal denklemler,
+- [01 · Lineer Regresyon](/posts/yz50-01-lineer-regresyon/) — tek değişkenli hali, normal denklemler,
   koşullanmanın ilk görünüşü
-- [12-backpropagation-calculus](/posts/yz50-12-backpropagation-calculus/) — chain rule'un skaler hali;
+- [12 · Backpropagation Calculus](/posts/yz50-12-backpropagation-calculus/) — chain rule'un skaler hali;
   buradaki matrix kuralı onun tensör karşılığı
-- [18-broadcasting](/posts/yz50-18-broadcasting/) — geri dönüşte `sum`'ın nereden çıktığı
-- [17-mae-huber-loss](/posts/yz50-17-mae-huber-loss/) — loss seçimi bu genellemeden bağımsız
+- [18 · PyTorch Broadcasting ve keepdim Tuzağı](/posts/yz50-18-broadcasting/) — geri dönüşte `sum`'ın nereden çıktığı
+- [17 · MAE'nin Köşesi ve Huber Loss](/posts/yz50-17-mae-huber-loss/) — loss seçimi bu genellemeden bağımsız
 
 Görseller [img/make_hyperspace_figures.py](/yz50/make_hyperspace_figures.py) ile üretiliyor.

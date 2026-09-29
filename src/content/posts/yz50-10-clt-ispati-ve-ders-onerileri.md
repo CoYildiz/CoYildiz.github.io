@@ -1,11 +1,11 @@
 ---
-title: "Hafta 2 — CLT (Central Limit Theorem — Merkezi Limit Teoremi)'nin Gerçek İspatı + Hangi İstatistik/Matematik Derslerine Bakmalı"
+title: "10 · CLT'nin İspatı ve Ders Önerileri"
 published: 2026-09-29
 description: "CLT'nin ispatının ana hattı (karakteristik fonksiyon), gradient ortalamalarıyla ilişkisi ve ML için hangi istatistik derslerine bakmak gerektiği."
 tags:
   - YZ50
   - İstatistik
-category: YZ50
+category: ML
 draft: false
 lang: tr
 ---
@@ -102,4 +102,4 @@ Roadmap'in kendi Faz 3.0 Matematik Hatırlatma bölümü zaten "probability & is
 
 ## Bağlantı
 
-**Bağlantılı:** [Hafta 2 — Neden Gradient Descent? İstatistiksel ve Matematiksel Temeller](/posts/yz50-07-neden-gradient-descent/)
+**Bağlantılı:** [07 · Neden Gradient Descent?](/posts/yz50-07-neden-gradient-descent/)

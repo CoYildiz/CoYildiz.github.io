@@ -1,11 +1,11 @@
 ---
-title: "Hafta 1 / Video 2 — Gradient Descent, How Neural Networks Learn (3Blue1Brown)"
+title: "06 · Gradient Descent"
 published: 2026-09-29
 description: "Gradient descent'in geometrisi: negatif gradient neden en dik iniş yönü, cost yüzeyi nasıl bir şey ve öğrenme tam olarak nerede gerçekleşiyor."
 tags:
   - YZ50
   - Gradient Descent
-category: YZ50
+category: ML
 draft: false
 lang: tr
 ---
@@ -18,7 +18,7 @@ lang: tr
 > taramasında yedi yanlış iddia bulunup düzeltildi. Kritik bir şeyi buradan alıp
 > kullanmadan önce birincil kaynaktan doğrula.
 
-Kaynak: [3blue1brown.com/lessons/gradient-descent](https://www.3blue1brown.com/lessons/gradient-descent), orijinal video [YouTube'da](https://www.youtube.com/watch?v=IHZwWFHWa-w). Önceki: [Video 1 notları](/posts/yz50-04-sinir-agi-nedir/).
+Kaynak: [3blue1brown.com/lessons/gradient-descent](https://www.3blue1brown.com/lessons/gradient-descent), orijinal video [YouTube'da](https://www.youtube.com/watch?v=IHZwWFHWa-w). Önceki: [04 · Sinir Ağı Nedir?](/posts/yz50-04-sinir-agi-nedir/).
 
 ---
 
@@ -112,4 +112,4 @@ Bu gradient'i **verimli şekilde hesaplama algoritmasının adı: backpropagatio
 - **Görev 4** (parametre/loss gözlemi + eğri çizimi) ↔ "Minimize Etmek" bölümündeki 1D top-yuvarlanma görseli — bunu kendi basit örneğinle üretmen isteniyor.
 - **Görev 5** (numerical derivativele gradient descent) ↔ bu video **kavramsal temeli** (gradient, negatif gradient yönünde adım atma, learning rate) veriyor; **numerical derivative'in nasıl hesaplanacağı** (finite difference: (f(x+h)-f(x)) / h) Karpathy'nin videosunda (Video 3) geliyor — oraya bakınca bu notlara ek yapılacak.
 
-**Bağlantılı:** [Video 1 notları](/posts/yz50-04-sinir-agi-nedir/)
+**Bağlantılı:** [04 · Sinir Ağı Nedir?](/posts/yz50-04-sinir-agi-nedir/)

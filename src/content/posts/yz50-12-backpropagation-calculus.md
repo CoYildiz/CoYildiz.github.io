@@ -1,11 +1,11 @@
 ---
-title: "Hafta 2 — Backpropagation Calculus (3Blue1Brown, kesin matematik)"
+title: "12 · Backpropagation Calculus"
 published: 2026-09-29
 description: "Zincir kuralının ağ üzerindeki tam muhasebesi — her kısmi türevin hangi terimden geldiği, indisleriyle birlikte."
 tags:
   - YZ50
   - Backpropagation
-category: YZ50
+category: ML
 draft: false
 lang: tr
 ---
@@ -18,7 +18,7 @@ lang: tr
 > taramasında yedi yanlış iddia bulunup düzeltildi. Kritik bir şeyi buradan alıp
 > kullanmadan önce birincil kaynaktan doğrula.
 
-Kaynak: [3blue1brown.com/lessons/backpropagation-calculus](https://www.3blue1brown.com/lessons/backpropagation-calculus), orijinal video [YouTube'da](https://www.youtube.com/watch?v=tIeHLnjs5U8). **Bu, YZ50 Hafta 2'nin kendi kaynak listesindeki 4. madde** — resmi materyal, serinin sonuncusu. Önceki: [Backprop sezgisi](/posts/yz50-11-backpropagation-sezgisi/). **Bu not, `Value.backward()`'ının içinde tam olarak ne olduğunu birebir açıklıyor — Hafta 2'nin en kritik notu.**
+Kaynak: [3blue1brown.com/lessons/backpropagation-calculus](https://www.3blue1brown.com/lessons/backpropagation-calculus), orijinal video [YouTube'da](https://www.youtube.com/watch?v=tIeHLnjs5U8). **Bu, YZ50 Hafta 2'nin kendi kaynak listesindeki 4. madde** — resmi materyal, serinin sonuncusu. Önceki: [11 · Backpropagation Sezgisi](/posts/yz50-11-backpropagation-sezgisi/). **Bu not, `Value.backward()`'ının içinde tam olarak ne olduğunu birebir açıklıyor — Hafta 2'nin en kritik notu.**
 
 ---
 
@@ -174,7 +174,7 @@ bir skaler. Yani:
 $$\frac{\text{ileri mod maliyeti}}{\text{geri mod maliyeti}} = \frac{n}{m} = \frac{13002}{1}$$
 
 **Geri mod tek geçişte bütün derivative'leri veriyor.** İleri mod aynı sonucu 13.002 geçişte verirdi —
-ki bu, [01-lineer-regresyon](/posts/yz50-01-lineer-regresyon/)'daki koordinat aramasının ve numerical derivative'in
+ki bu, [01 · Lineer Regresyon](/posts/yz50-01-lineer-regresyon/)'daki koordinat aramasının ve numerical derivative'in
 tam olarak düştüğü tuzak. Backprop o tuzaktan kaçmanın adı.
 
 **Bedeli var:** geri mod, ileri geçişteki **ara değerleri saklamak** zorunda ($z$, $a$, her layer'da).
@@ -226,4 +226,4 @@ $\tanh'(n)$ (aktivasyonun o noktadaki kendi davranışı) **iki durumda da bireb
 
 **Ek kaynaklar (kaynağın önerdiği, ihtiyaç olursa):** [Nielsen'in kitabı, Bölüm 2](http://neuralnetworksanddeeplearning.com/chap2.html) (kodu  altında), [colah'ın backprop yazısı](http://colah.github.io/posts/2015-08-Backprop/), ileri seviye için Goodfellow/Bengio/Courville'in *Deep Learning* kitabı (Faz 4 seviyesi).
 
-**Bağlantılı:** [Hafta 2 — Backpropagation Sezgisi (3Blue1Brown, "What is backpropagation really doing?")](/posts/yz50-11-backpropagation-sezgisi/)
+**Bağlantılı:** [11 · Backpropagation Sezgisi](/posts/yz50-11-backpropagation-sezgisi/)

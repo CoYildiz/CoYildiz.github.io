@@ -1,12 +1,12 @@
 ---
-title: "Kaiming Init ve BatchNorm — ölçeği ağın içinde kontrol etmek"
+title: "14 · Kaiming Init ve BatchNorm"
 published: 2026-09-29
 description: "Ölçek problemi ağın içinde nasıl kontrol ediliyor: Kaiming/Xavier initialization'ın türetimi ve BatchNorm'un tam olarak neyi sabitlediği."
 tags:
   - YZ50
   - Normalizasyon
   - Initialization
-category: YZ50
+category: ML
 draft: false
 lang: tr
 ---
@@ -19,7 +19,7 @@ lang: tr
 > taramasında yedi yanlış iddia bulunup düzeltildi. Kritik bir şeyi buradan alıp
 > kullanmadan önce birincil kaynaktan doğrula.
 
-[01-lineer-regresyon](/posts/yz50-01-lineer-regresyon/)'un 4. bölümünde şu zincir kurulmuştu: learning
+[01 · Lineer Regresyon](/posts/yz50-01-lineer-regresyon/) notunun 4. bölümünde şu zincir kurulmuştu: learning
 rate'in üst sınırı $2/L$, $L$ verinin ölçeğine bağlı, öyleyse veriyi standartlaştırırsan çok daha
 büyük adım atabilirsin (o veride 220 kat).
 
@@ -40,7 +40,7 @@ Bir layer'ın çıktısı: `h = tanh(x @ W + b)`. Burada iki şey birbirini kova
 
 - `x` büyükse `z = x @ W + b` büyük olur
 - `z` büyükse `tanh(z)` doyar → derivative sıfıra gider → **vanishing gradient**
-  (bkz. [13-aktivasyon-fonksiyonlari](/posts/yz50-13-aktivasyon-fonksiyonlari/))
+  (bkz. [13 · Sigmoid vs Tanh vs ReLU](/posts/yz50-13-aktivasyon-fonksiyonlari/))
 
 Ve tersi de kötü: `W` çok küçükse `z` sıfıra çöker, aktivasyonlar birbirine benzer, layer hiçbir
 şey ayırt etmez.
@@ -66,7 +66,7 @@ hesabından çıkıyor.
 $$z_j = \sum_{k=1}^{\text{fan\_in}} x_k W_{kj}$$
 
 Bağımsız terimlerin toplamının varyansı, varyansların toplamı
-(bkz. [07-neden-gradient-descent](/posts/yz50-07-neden-gradient-descent/)'in `Var` türetimi):
+(bkz. [07 · Neden Gradient Descent?](/posts/yz50-07-neden-gradient-descent/) notunun `Var` türetimi):
 
 $$\mathrm{Var}[z] = \text{fan\_in} \cdot \mathrm{Var}[x]\,\mathrm{Var}[W]$$
 
@@ -184,11 +184,11 @@ görünüyor (gürültü sınırında).
 
 **Bu bölüm neden var:** Bu iki teknik yalıtılmış numaralar değil, üç ayrı notun kesiştiği yer.
 
-- [01-lineer-regresyon](/posts/yz50-01-lineer-regresyon/), bölüm 4 — $\mathrm{lr} < 2/L$ ve ölçeğin $L$'yi
+- [01 · Lineer Regresyon](/posts/yz50-01-lineer-regresyon/), bölüm 4 — $\mathrm{lr} < 2/L$ ve ölçeğin $L$'yi
   belirlemesi. Bu notun **gerekçesi** orada
-- [13-aktivasyon-fonksiyonlari](/posts/yz50-13-aktivasyon-fonksiyonlari/) — tanh'ın doyması ve vanishing
+- [13 · Sigmoid vs Tanh vs ReLU](/posts/yz50-13-aktivasyon-fonksiyonlari/) — tanh'ın doyması ve vanishing
   gradient. Bu notun **çözdüğü problem** orada
-- [02-hiperuzay](/posts/yz50-02-hiperuzay-cok-degiskenli-regresyon/), bölüm 5 — condition number ve
+- [02 · Hiperuzay ve Matrix Gradient](/posts/yz50-02-hiperuzay-cok-degiskenli-regresyon/), bölüm 5 — condition number ve
   standartlaştırma. Aynı fikrin iki parametreli, çizilebilir hali
 
 **Sonraki adım:** BatchNorm'un backward'ını elle yazmak — YZ50 Hafta 5'in görevlerinden biri.

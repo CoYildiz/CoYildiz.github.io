@@ -1,12 +1,12 @@
 ---
-title: "Hafta 2 — Aktivasyon + Loss Eşleşmesi: Neden 'Sihirli' Sadeleşme Her Yerde Çıkıyor"
+title: "15 · Aktivasyon + Loss Eşleşmesi"
 published: 2026-09-29
 description: "Sigmoid+BCE ve softmax+cross-entropy'de türevin neden hep (ŷ−y)'ye sadeleştiği — tesadüf değil, GLM'den gelen yapısal bir sonuç."
 tags:
   - YZ50
   - Aktivasyon
   - Loss
-category: YZ50
+category: ML
 draft: false
 lang: tr
 ---
@@ -120,4 +120,4 @@ aktivasyonun derivative'ini **siliyor**.
 
 Bu, senin şu anki `Value`/`MLP (Multi-Layer Perceptron)` görevinin **dışında** — output layer'ı tasarımı, Faz 3-4'te PyTorch'la gerçek sınıflandırma/regresyon yaparken (`nn.BCELoss`, `nn.CrossEntropyLoss`, `nn.MSELoss`) doğrudan karşına çıkacak. Hidden layer'daki tanh seçimin ayrı bir konu (bkz. [13](/posts/yz50-13-aktivasyon-fonksiyonlari/)).
 
-**Bağlantılı:** [Hafta 2 — Aktivasyon Fonksiyonları: Sigmoid vs Tanh vs ReLU](/posts/yz50-13-aktivasyon-fonksiyonlari/) · [Hafta 2 — Backpropagation Calculus (3Blue1Brown, kesin matematik)](/posts/yz50-12-backpropagation-calculus/).
+**Bağlantılı:** [13 · Sigmoid vs Tanh vs ReLU](/posts/yz50-13-aktivasyon-fonksiyonlari/) · [12 · Backpropagation Calculus](/posts/yz50-12-backpropagation-calculus/).

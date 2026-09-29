@@ -1,11 +1,11 @@
 ---
-title: "Hafta 3 — Sampling Döngüsü: `P[ix]` ve Seed Tekrarlanabilirliği"
+title: "19 · Sampling Döngüsü"
 published: 2026-09-29
 description: "Karakter üreten sampling döngüsünün her satırı: olasılık dağılımından çekim, seed ile tekrarlanabilirlik ve sık yapılan indeks hataları."
 tags:
   - YZ50
   - Dil Modeli
-category: YZ50
+category: ML
 draft: false
 lang: tr
 ---
@@ -18,7 +18,7 @@ lang: tr
 > taramasında yedi yanlış iddia bulunup düzeltildi. Kritik bir şeyi buradan alıp
 > kullanmadan önce birincil kaynaktan doğrula.
 
-Görev 2'nin ikinci yarısı: probability matrix'inden isim üretmek. İki ayrı kafa karışıklığını kapatıyor — `P[ix]`'in ne döndürdüğü, ve aynı seed'in neden videodakiyle aynı çıktıyı vermediği. Önceki not: [broadcasting ve `keepdim`](/posts/yz50-18-broadcasting/).
+Görev 2'nin ikinci yarısı: probability matrix'inden isim üretmek. İki ayrı kafa karışıklığını kapatıyor — `P[ix]`'in ne döndürdüğü, ve aynı seed'in neden videodakiyle aynı çıktıyı vermediği. Önceki not: [18 · PyTorch Broadcasting ve keepdim Tuzağı](/posts/yz50-18-broadcasting/).
 
 ---
 
@@ -97,4 +97,4 @@ Bir generator kullanıldıkça durumu ilerler. Yukarıdaki oyuncak `torch.rand(3
 
 ---
 
-**İlgili:** [Hafta 3 — PyTorch Broadcasting ve `keepdim` Tuzağı](/posts/yz50-18-broadcasting/)
+**İlgili:** [18 · PyTorch Broadcasting ve keepdim Tuzağı](/posts/yz50-18-broadcasting/)

@@ -1,12 +1,12 @@
 ---
-title: "Hafta 3 — `torch.multinomial` Tam Olarak Ne Yapıyor"
+title: "20 · torch.multinomial Ne Yapıyor?"
 published: 2026-09-29
 description: "`torch.multinomial` girdisini nasıl yorumluyor, normalize ediyor mu, replacement ne değiştiriyor — belgelenmiş davranışıyla birlikte."
 tags:
   - YZ50
   - PyTorch
   - Sampling
-category: YZ50
+category: ML
 draft: false
 lang: tr
 ---
@@ -19,7 +19,7 @@ lang: tr
 > taramasında yedi yanlış iddia bulunup düzeltildi. Kritik bir şeyi buradan alıp
 > kullanmadan önce birincil kaynaktan doğrula.
 
-Sampling'in motoru. Görev 2'de isim üretmek, Görev 4'te modelin çıktısından harf çekmek için kullanılıyor. Önceki notlar: [broadcasting](/posts/yz50-18-broadcasting/) · [sampling döngüsü](/posts/yz50-19-sampling-dongusu/).
+Sampling'in motoru. Görev 2'de isim üretmek, Görev 4'te modelin çıktısından harf çekmek için kullanılıyor. Önceki notlar: [18 · PyTorch Broadcasting ve keepdim Tuzağı](/posts/yz50-18-broadcasting/) · [19 · Sampling Döngüsü](/posts/yz50-19-sampling-dongusu/).
 
 ---
 

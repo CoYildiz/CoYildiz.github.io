@@ -1,11 +1,11 @@
 ---
-title: "Hafta 3 — Bigram'ın Sinir Ağı Hali: one-hot ve `W`"
+title: "21 · Bigram'ın Sinir Ağı Hali — one-hot ve W"
 published: 2026-09-29
 description: "Sayım tabanlı bigram ile tek katmanlı sinir ağının aynı şeyi yaptığının gösterimi: one-hot çarpımı aslında satır seçmek."
 tags:
   - YZ50
   - Dil Modeli
-category: YZ50
+category: ML
 draft: false
 lang: tr
 ---
@@ -152,4 +152,4 @@ Bu döngü tekrarlandıkça `W`, sayım tablosunun logaritmasına yaklaşıyor.
 
 ---
 
-**Bağlantılı:** [Hafta 3 — PyTorch Broadcasting ve `keepdim` Tuzağı](/posts/yz50-18-broadcasting/) · [Hafta 3 — Loss, NLL, Cross-Entropy ve Beklenen Değer](/posts/yz50-16-loss-nll-cross-entropy/) · [Genel Tekrar — Hafta 1 ve Hafta 2](/posts/yz50-24-tekrar-micrograd-muhasebesi/)
+**Bağlantılı:** [18 · PyTorch Broadcasting ve keepdim Tuzağı](/posts/yz50-18-broadcasting/) · [16 · Loss, NLL ve Cross-Entropy](/posts/yz50-16-loss-nll-cross-entropy/) · [24 · Genel Tekrar — micrograd muhasebesi](/posts/yz50-24-tekrar-micrograd-muhasebesi/)

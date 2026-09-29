@@ -1,11 +1,11 @@
 ---
-title: "Hafta 2 — Stochastic Gradient Descent: Ne Zaman, Neden Rastgele, Alternatifler"
+title: "08 · Stochastic Gradient Descent"
 published: 2026-09-29
 description: "Tek örnekle adım atmak neden çalışıyor: batch boyutunun gürültü-hız dengesi, rastgeleliğin rolü ve alternatiflerle karşılaştırma."
 tags:
   - YZ50
   - Gradient Descent
-category: YZ50
+category: ML
 draft: false
 lang: tr
 ---
@@ -86,4 +86,4 @@ Kaynak: Michael Nielsen — [Neural Networks and Deep Learning, Bölüm 1](http:
 
 Görev 5'teki (`Neuron`/`Layer`/`MLP (Multi-Layer Perceptron)` training loop) toy dataset'in muhtemelen tamamını her adımda kullanacaksın — pratikte bu batch GD'ye denk düşüyor (veri seti zaten küçük, mini-batch'e ihtiyaç yok). Mini-batch/SGD ayrımı, veri gerçekten büyüdüğünde (Faz 3-4, PyTorch, F1 telemetri) anlamlı hale gelecek. Fraud detection ilgi alanınla (roadmap'in kariyer bölümü) kesişen kısım: stratified batching, dengesiz veri setlerinde doğrudan işine yarayacak bir teknik.
 
-**Bağlantılı:** [Hafta 2 — Aktivasyon Fonksiyonları: Sigmoid vs Tanh vs ReLU](/posts/yz50-13-aktivasyon-fonksiyonlari/).
+**Bağlantılı:** [13 · Sigmoid vs Tanh vs ReLU](/posts/yz50-13-aktivasyon-fonksiyonlari/).

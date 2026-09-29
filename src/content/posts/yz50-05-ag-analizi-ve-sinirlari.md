@@ -1,11 +1,11 @@
 ---
-title: "Hafta 1 / 3Blue1Brown Ara Bölüm — Analyzing Our Neural Network"
+title: "05 · Ağ Analizi ve Sınırları"
 published: 2026-09-29
 description: "Eğitilmiş ağın weight'lerine bakınca ne görüyoruz: 'kenar dedektörü' hikâyesinin nerede tutmadığı ve rastgele gürültünün neden yüksek güvenle sınıflandırıldığı."
 tags:
   - YZ50
   - Sinir Ağları
-category: YZ50
+category: ML
 draft: false
 lang: tr
 ---
@@ -18,7 +18,7 @@ lang: tr
 > taramasında yedi yanlış iddia bulunup düzeltildi. Kritik bir şeyi buradan alıp
 > kullanmadan önce birincil kaynaktan doğrula.
 
-Kaynak: [3blue1brown.com/lessons/neural-network-analysis](https://www.3blue1brown.com/lessons/neural-network-analysis), orijinal video [YouTube'da](https://www.youtube.com/watch?v=Ilg3gGewQ5U) değil — bu, gradient descent (Video 2) ile backpropagation (Video 4, "What is backpropagation really doing?") arasına sıkıştırılmış bir **ara bölüm** (interlude), 3Blue1Brown'ın kendi sitesinde "Chapter 3" olarak numaralanmış. Önceki: [Video 2 notları](/posts/yz50-06-gradient-descent/). **Not:** Bu, YZ50'nin kendi "Video 3"ü (Karpathy'nin numerical derivative videosu) ile karıştırılmamalı — farklı bir kaynak, farklı numaralandırma.
+Kaynak: [3blue1brown.com/lessons/neural-network-analysis](https://www.3blue1brown.com/lessons/neural-network-analysis), orijinal video [YouTube'da](https://www.youtube.com/watch?v=Ilg3gGewQ5U) değil — bu, gradient descent (Video 2) ile backpropagation (Video 4, "What is backpropagation really doing?") arasına sıkıştırılmış bir **ara bölüm** (interlude), 3Blue1Brown'ın kendi sitesinde "Chapter 3" olarak numaralanmış. Önceki: [06 · Gradient Descent](/posts/yz50-06-gradient-descent/). **Not:** Bu, YZ50'nin kendi "Video 3"ü (Karpathy'nin numerical derivative videosu) ile karıştırılmamalı — farklı bir kaynak, farklı numaralandırma.
 
 ---
 
@@ -114,4 +114,4 @@ Bölüm, "backpropagation, ağ eğitiminin asıl beygirgücü" diyerek bir sonra
 
 ## Bağlantı
 
-**Bağlantılı:** [Video 1 notları](/posts/yz50-04-sinir-agi-nedir/) · [Video 2 notları](/posts/yz50-06-gradient-descent/)
+**Bağlantılı:** [04 · Sinir Ağı Nedir?](/posts/yz50-04-sinir-agi-nedir/) · [06 · Gradient Descent](/posts/yz50-06-gradient-descent/)

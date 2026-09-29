@@ -1,11 +1,11 @@
 ---
-title: "Hafta 2 — Optimizer Varyantları: Momentum, AdaGrad, RMSprop, Adam"
+title: "09 · Optimizer Varyantları — Momentum, AdaGrad, RMSprop, Adam"
 published: 2026-09-29
 description: "Momentum, AdaGrad, RMSprop ve Adam'ın her birinin çözdüğü problem — epsilon'un karekökün dışında olması ve bias correction dahil."
 tags:
   - YZ50
   - Optimizasyon
-category: YZ50
+category: ML
 draft: false
 lang: tr
 ---
@@ -138,4 +138,4 @@ yavaş ilerliyor.
 
 Bunların hiçbiri Hafta 2'nin görevi değil — Görev 5'teki eğitim döngün muhtemelen düz gradient descent (`param -= lr * param.grad` tarzı, momentum/Adam yok). Ama Faz 4'te PyTorch'a geçince `torch.optim.SGD`, `torch.optim.Adam` gibi hazır sınıflar tam olarak yukarıdaki formülleri uyguluyor — o zaman bu not işine yarayacak.
 
-**Bağlantılı:** [Hafta 2 — Stochastic Gradient Descent: Ne Zaman, Neden Rastgele, Alternatifler](/posts/yz50-08-stochastic-gradient-descent/).
+**Bağlantılı:** [08 · Stochastic Gradient Descent](/posts/yz50-08-stochastic-gradient-descent/).

@@ -1,12 +1,12 @@
 ---
-title: "Hafta 3 — Loss, NLL, Cross-Entropy ve Beklenen Değer"
+title: "16 · Loss, NLL ve Cross-Entropy"
 published: 2026-09-29
 description: "Loss fonksiyonunun olasılıktan türetilmesi: likelihood, negative log-likelihood ve cross-entropy'nin aynı şeyin üç adı oluşu."
 tags:
   - YZ50
   - Loss
   - Cross-Entropy
-category: YZ50
+category: ML
 draft: false
 lang: tr
 ---
@@ -383,7 +383,7 @@ bozukluklar — sönen gradient, yerel minimumlu yüzey — bu tutarsızlığın
 Para kutusu örneğinde iki adayı hesaplayıp karşılaştırdın. Burada yapamazsın: `w` sürekli ve çok
 boyutlu, aday sayısı sonsuz. Tek tek deneyemediğin için **eğime bakıp yokuş aşağı yürüyorsun.**
 
-Bu zaten ayrı bir notta: [07-neden-gradient-descent](/posts/yz50-07-neden-gradient-descent/) — boyutun laneti
+Bu zaten ayrı bir notta: [07 · Neden Gradient Descent?](/posts/yz50-07-neden-gradient-descent/) — boyutun laneti
 ve rastgele aramanın neden çalışmadığı. O not "neden arama değil"i, bu bölüm "aradığımız şey
 neydi"yi cevaplıyor. Aynı resmin iki yarısı.
 
@@ -454,4 +454,4 @@ Bu notun akademik karşılığı: [Jurafsky & Martin, SLP3 Bölüm 3 — N-gram 
 
 ---
 
-**Bağlantılı:** [Hafta 2 — Aktivasyon + Loss Eşleşmesi: Neden "Sihirli" Sadeleşme Her Yerde Çıkıyor](/posts/yz50-15-aktivasyon-loss-eslesmesi/) (aktivasyon-loss eşleşmesinin GLM gerekçesi) · [Hafta 3 — PyTorch Broadcasting ve `keepdim` Tuzağı](/posts/yz50-18-broadcasting/) · [Genel Tekrar — Hafta 1 ve Hafta 2](/posts/yz50-24-tekrar-micrograd-muhasebesi/)
+**Bağlantılı:** [15 · Aktivasyon + Loss Eşleşmesi](/posts/yz50-15-aktivasyon-loss-eslesmesi/) (aktivasyon-loss eşleşmesinin GLM gerekçesi) · [18 · PyTorch Broadcasting ve keepdim Tuzağı](/posts/yz50-18-broadcasting/) · [24 · Genel Tekrar — micrograd muhasebesi](/posts/yz50-24-tekrar-micrograd-muhasebesi/)

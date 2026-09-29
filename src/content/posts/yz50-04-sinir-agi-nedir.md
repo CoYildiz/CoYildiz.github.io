@@ -1,11 +1,11 @@
 ---
-title: "Hafta 1 / Video 1 — But What is a Neural Network? (3Blue1Brown)"
+title: "04 · Sinir Ağı Nedir?"
 published: 2026-09-29
 description: "3Blue1Brown Video 1'in notları: bir sinir ağı gerçekte hangi fonksiyonu kuruyor, weight ve bias ne işe yarıyor, katmanlar neyi temsil ediyor."
 tags:
   - YZ50
   - Sinir Ağları
-category: YZ50
+category: ML
 draft: false
 lang: tr
 ---
@@ -130,4 +130,4 @@ Sonuçta bütün ağ: 784 sayı içeri giriyor, 10 sayı dışarı çıkıyor. K
 
 ---
 
-**Bağlantılı:** [Video 2 notları](/posts/yz50-06-gradient-descent/) (henüz yok · izlenince eklenecek)
+**Bağlantılı:** [06 · Gradient Descent](/posts/yz50-06-gradient-descent/) (henüz yok · izlenince eklenecek)

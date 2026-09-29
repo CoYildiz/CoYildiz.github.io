@@ -1,11 +1,11 @@
 ---
-title: "MNIST'i Görselleştirme — Boyut İndirgeme Teknikleri (Kısa Not)"
+title: "23 · MNIST'i Görselleştirme — Boyut İndirgeme"
 published: 2026-09-29
 description: "784 boyutlu MNIST'i iki boyutta görmek: PCA, t-SNE ve UMAP'in ne gösterdiği, neyi çarpıttığı."
 tags:
   - YZ50
   - Görselleştirme
-category: YZ50
+category: ML
 draft: false
 lang: tr
 ---

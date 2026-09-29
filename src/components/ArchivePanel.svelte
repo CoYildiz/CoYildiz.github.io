@@ -8,6 +8,7 @@ import { getPostUrlBySlug } from "../utils/url-utils";
 export let tags: string[];
 export let categories: string[];
 export let sortedPosts: Post[] = [];
+export let seriesCategory = "";
 
 const params = new URLSearchParams(window.location.search);
 tags = params.has("tag") ? params.getAll("tag") : [];
@@ -43,6 +44,15 @@ function formatTag(tagList: string[]) {
 
 onMount(async () => {
 	let filteredPosts: Post[] = sortedPosts;
+
+	// Seri yazilari kendi sayfasinda listeleniyor; arsivde yalnizca
+	// dogrudan o kategori/etiket secildiginde gorunsunler.
+	const filtreVar = tags.length > 0 || categories.length > 0 || !!uncategorized;
+	if (seriesCategory && !filtreVar) {
+		filteredPosts = filteredPosts.filter(
+			(post) => post.data.category !== seriesCategory,
+		);
+	}
 
 	if (tags.length > 0) {
 		filteredPosts = filteredPosts.filter(

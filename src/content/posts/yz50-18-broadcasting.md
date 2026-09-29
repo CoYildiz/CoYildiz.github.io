@@ -1,12 +1,12 @@
 ---
-title: "Hafta 3 — PyTorch Broadcasting ve `keepdim` Tuzağı"
+title: "18 · PyTorch Broadcasting ve keepdim Tuzağı"
 published: 2026-09-29
 description: "PyTorch broadcasting kurallarının adım adım işleyişi ve `keepdim=True` unutulduğunda sessizce yanlış sonuç veren klasik tuzak."
 tags:
   - YZ50
   - PyTorch
   - Broadcasting
-category: YZ50
+category: ML
 draft: false
 lang: tr
 ---
@@ -220,8 +220,8 @@ Broadcasting fiziksel kopya üretmez. Uzatılan eksende **stride 0** kullanılı
 
 ## micrograd'la bağlantı
 
-[Hafta 2](/posts/yz50-12-backpropagation-calculus/)'de `Value` skalerlerle çalışıyordu — her düğüm tek bir sayı, broadcasting diye bir kavram yok. PyTorch'ta aynı chain rule tensorlar üzerinde işliyor ve **şekil hatası gradient'i de sessizce bozuyor**: yanlış yönde yayılmış bir bölme, `backward()` çağrıldığında da yanlış derivative'leri geri akıtır. Yani bu bir "veri hazırlama detayı" değil, doğrudan öğrenmenin doğruluğu meselesi.
+[12 · Backpropagation Calculus](/posts/yz50-12-backpropagation-calculus/) notunda `Value` skalerlerle çalışıyordu — her düğüm tek bir sayı, broadcasting diye bir kavram yok. PyTorch'ta aynı chain rule tensorlar üzerinde işliyor ve **şekil hatası gradient'i de sessizce bozuyor**: yanlış yönde yayılmış bir bölme, `backward()` çağrıldığında da yanlış derivative'leri geri akıtır. Yani bu bir "veri hazırlama detayı" değil, doğrudan öğrenmenin doğruluğu meselesi.
 
 ---
 
-**İlgili:** [Hafta 2 — Backpropagation Calculus (3Blue1Brown, kesin matematik)](/posts/yz50-12-backpropagation-calculus/)
+**İlgili:** [12 · Backpropagation Calculus](/posts/yz50-12-backpropagation-calculus/)

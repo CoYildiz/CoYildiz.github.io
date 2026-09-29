@@ -1,12 +1,12 @@
 ---
-title: "Hafta 2 — Neden Gradient Descent? İstatistiksel ve Matematiksel Temeller"
+title: "07 · Neden Gradient Descent?"
 published: 2026-09-29
 description: "Neden kapalı form değil de iteratif iniş: istatistiksel gerekçe, maximum likelihood bağlantısı ve random reshuffling literatürünün söyledikleri."
 tags:
   - YZ50
   - Gradient Descent
   - İstatistik
-category: YZ50
+category: ML
 draft: false
 lang: tr
 ---
@@ -283,4 +283,4 @@ hız farkı değil, **cins farkı**.
 
 Bu not, [08](/posts/yz50-08-stochastic-gradient-descent/) (mini-batch pratikleri) ve [09](/posts/yz50-09-optimizer-varyantlari/) (Hessian'dan kaçış) notlarının **neden** sorusuna cevap veriyor — o notlar "ne yapılıyor", bu not "neden başka türlü yapılamıyor".
 
-**Bağlantılı:** [Hafta 2 — Stochastic Gradient Descent: Ne Zaman, Neden Rastgele, Alternatifler](/posts/yz50-08-stochastic-gradient-descent/) · [Hafta 2 — Optimizer Varyantları: Momentum, AdaGrad, RMSprop, Adam](/posts/yz50-09-optimizer-varyantlari/).
+**Bağlantılı:** [08 · Stochastic Gradient Descent](/posts/yz50-08-stochastic-gradient-descent/) · [09 · Optimizer Varyantları — Momentum, AdaGrad, RMSprop, Adam](/posts/yz50-09-optimizer-varyantlari/).

@@ -1,12 +1,12 @@
 ---
-title: "Genel Tekrar — Hafta 1 ve Hafta 2"
+title: "24 · Genel Tekrar — micrograd muhasebesi"
 published: 2026-09-29
 description: "Hafta 1 ve 2'nin toplu tekrarı: micrograd'ın defter tutma mantığı üzerinden forward ve backward'ın uçtan uca izi."
 tags:
   - YZ50
   - Backpropagation
   - Tekrar
-category: YZ50
+category: ML
 draft: false
 lang: tr
 ---
@@ -264,6 +264,6 @@ Bu hataların ortak yanı: **üçü sessiz, ikisi gürültülü.** Sessiz olanla
 - Gradient toplama (`+=`) → tensörlerde de aynı, `zero_grad` orada da şart
 - Loss'un bir sayı olması → NLL (Negative Log Likelihood) de tek bir sayı, sadece farklı bir formülle
 
-**Bağlantılı:** [Hafta 2 — Backpropagation Calculus (3Blue1Brown, kesin matematik)](/posts/yz50-12-backpropagation-calculus/) · [Hafta 2 — Aktivasyon Fonksiyonları: Sigmoid vs Tanh vs ReLU](/posts/yz50-13-aktivasyon-fonksiyonlari/) · [Hafta 3 — PyTorch Broadcasting ve `keepdim` Tuzağı](/posts/yz50-18-broadcasting/)
+**Bağlantılı:** [12 · Backpropagation Calculus](/posts/yz50-12-backpropagation-calculus/) · [13 · Sigmoid vs Tanh vs ReLU](/posts/yz50-13-aktivasyon-fonksiyonlari/) · [18 · PyTorch Broadcasting ve keepdim Tuzağı](/posts/yz50-18-broadcasting/)
 
 Görseller [img/make_micrograd_figures.py](/yz50/make_micrograd_figures.py) ile üretiliyor.

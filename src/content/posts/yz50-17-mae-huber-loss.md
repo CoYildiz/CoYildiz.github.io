@@ -1,11 +1,11 @@
 ---
-title: "MAE (Mean Absolute Error)'nin Köşesi ve Huber Loss"
+title: "17 · MAE'nin Köşesi ve Huber Loss"
 published: 2026-09-29
 description: "MAE'nin sıfırdaki köşesi neden sorun, Huber loss bunu nasıl yumuşatıyor ve outlier'a karşı hangi loss gerçekte ne kadar dirençli."
 tags:
   - YZ50
   - Loss
-category: YZ50
+category: ML
 draft: false
 lang: tr
 ---
@@ -215,11 +215,11 @@ bir çarpan farkıyla aynı fonksiyon, dokümandaki tanımı kontrol et.
 
 ## İlgili notlar
 
-- [13 — Loss, NLL (Negative Log Likelihood), Cross-Entropy](/posts/yz50-16-loss-nll-cross-entropy/): hangi loss neye
+- [16 · Loss, NLL ve Cross-Entropy](/posts/yz50-16-loss-nll-cross-entropy/): hangi loss neye
   yakınsar (MSE → ortalama, MAE → medyan, cross-entropy → dağılımın tamamı)
-- [12 — Aktivasyon + Loss Eşleşmesi](/posts/yz50-15-aktivasyon-loss-eslesmesi/): loss
+- [15 · Aktivasyon + Loss Eşleşmesi](/posts/yz50-15-aktivasyon-loss-eslesmesi/): loss
   seçiminin arkasındaki GLM teorisi
-- [11 — Aktivasyon Fonksiyonları](/posts/yz50-13-aktivasyon-fonksiyonlari/): ReLU'nun aynı
+- [13 · Sigmoid vs Tanh vs ReLU](/posts/yz50-13-aktivasyon-fonksiyonlari/): ReLU'nun aynı
   köşesi
 
 Görseller [img/make_huber_figures.py](/yz50/make_huber_figures.py) ile üretiliyor.
