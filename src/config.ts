@@ -46,6 +46,12 @@ export const navBarConfig: NavBarConfig = {
 			name: "ML",
 			url: "/ml/",
 		},
+		// Ilk proje girdisi eklendiginde asagidaki uc satirin yorumunu kaldir
+		// (girdiler: src/data/projects.ts). Bos bir sayfayi menuye koymuyoruz.
+		// {
+		// 	name: "Projeler",
+		// 	url: "/projects/",
+		// },
 		LinkPreset.Archive,
 		LinkPreset.About,
 		{

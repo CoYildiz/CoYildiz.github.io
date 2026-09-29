@@ -1,0 +1,78 @@
+---
+import MainGridLayout from "@layouts/MainGridLayout.astro";
+import { projects, statusLabels } from "../data/projects";
+
+const gelistirme = import.meta.env.DEV;
+---
+
+<MainGridLayout title="Projeler" description="İnşa ettiğim şeyler: ne problemi çözüyor, hangi kararı neden verdim, sonuç ne oldu.">
+    <div class="card-base z-10 px-6 md:px-9 py-6 mb-4">
+        <h1 class="text-3xl font-bold text-90 mb-3">Projeler</h1>
+        <p class="text-75 leading-relaxed">
+            İnşa ettiğim şeyler. Her biri için aynı üç soruyu cevaplamaya çalışıyorum:
+            hangi problemi çözüyor, en ilginç teknik kararı neden öyle verdim, ve bunu
+            doğrulayan somut sonuç ne.
+        </p>
+    </div>
+
+    {projects.length === 0 && gelistirme && (
+        <div class="card-base z-10 px-6 md:px-9 py-6 mb-4">
+            <p class="text-75 leading-relaxed">
+                <strong>Bu uyarı yalnızca yerel geliştirmede görünür.</strong>
+                Henüz girdi yok — <code class="text-[var(--primary)]">src/data/projects.ts</code>
+                içindeki <code class="text-[var(--primary)]">projects</code> dizisine ekle.
+                Sayfa, dizi boşken menüde de görünmüyor.
+            </p>
+        </div>
+    )}
+
+    {projects.map((p) => (
+        <div class="card-base z-10 px-6 md:px-9 py-6 mb-4">
+            <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-3">
+                <h2 class="text-xl font-bold text-90">{p.title}</h2>
+                <span class="text-sm text-50">{statusLabels[p.status]}</span>
+                {p.date && <span class="text-sm text-30">{p.date}</span>}
+            </div>
+
+            <dl class="flex flex-col gap-3">
+                <div>
+                    <dt class="text-50 text-sm mb-0.5">Problem</dt>
+                    <dd class="text-75 leading-relaxed">{p.problem}</dd>
+                </div>
+                <div>
+                    <dt class="text-50 text-sm mb-0.5">Karar</dt>
+                    <dd class="text-75 leading-relaxed">{p.decision}</dd>
+                </div>
+                <div>
+                    <dt class="text-50 text-sm mb-0.5">Sonuç</dt>
+                    <dd class="text-75 leading-relaxed">{p.evidence}</dd>
+                </div>
+            </dl>
+
+            {p.stack.length > 0 && (
+                <div class="flex flex-wrap gap-2 mt-4">
+                    {p.stack.map((s) => (
+                        <span class="text-sm text-50 bg-[var(--btn-regular-bg)] rounded-lg px-2 py-1">{s}</span>
+                    ))}
+                </div>
+            )}
+
+            {(p.repo || p.post) && (
+                <div class="flex flex-wrap gap-4 mt-4">
+                    {p.repo && (
+                        <a href={p.repo} target="_blank" rel="noopener"
+                           class="text-[var(--primary)] font-medium hover:opacity-80 transition">
+                            Kaynak kod →
+                        </a>
+                    )}
+                    {p.post && (
+                        <a href={p.post}
+                           class="text-[var(--primary)] font-medium hover:opacity-80 transition">
+                            İlgili yazı →
+                        </a>
+                    )}
+                </div>
+            )}
+        </div>
+    ))}
+</MainGridLayout>
