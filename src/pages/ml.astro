@@ -16,6 +16,7 @@ const bolumler: [string, string, number, number][] = [
 	["Aktivasyon, init ve loss", "Doygunluk, ölçeğin ağ içinde kontrolü ve loss seçiminin gerekçesi.", 13, 17],
 	["PyTorch ve dil modeli", "Broadcasting tuzakları, sampling döngüsü ve bigram'ın ağ hali.", 18, 21],
 	["Devamı", "RNN'e giriş, görselleştirme ve genel tekrar.", 22, 24],
+	["Ek konular", "YZ50 müfredatı dışında, kendi sorularımdan çıkan notlar: genelleme, model ayarı ve dil modeli temelleri.", 25, 99],
 ];
 
 const grupla = (bas: number, son: number) =>
@@ -23,6 +24,10 @@ const grupla = (bas: number, son: number) =>
 		const n = Number.parseInt(no(p.slug), 10);
 		return n >= bas && n <= son;
 	});
+
+// Hicbir bolume dusmeyen yazi olursa sessizce kaybolmasin diye yakala.
+const kapsanan = new Set(bolumler.flatMap(([, , b, s]) => grupla(b, s).map((p) => p.slug)));
+const kapsanmayan = posts.filter((p) => !kapsanan.has(p.slug));
 ---
 
 <MainGridLayout title="ML" description="Sıfırdan backpropagation ve dil modeli — YZ50 programı boyunca tutulan notlar.">
@@ -37,6 +42,25 @@ const grupla = (bas: number, son: number) =>
             {posts.length} yazı · notlar yapay zeka ile tartışılarak derlendi, hata içerebilir
         </p>
     </div>
+
+    {kapsanmayan.length > 0 && (
+        <div class="card-base z-10 px-6 md:px-9 py-6 mb-4">
+            <h2 class="text-xl font-bold text-90 mb-4">Diğer</h2>
+            <div class="flex flex-col gap-1">
+                {kapsanmayan.map((post) => (
+                    <a href={getPostUrlBySlug(post.slug)}
+                       class="group btn-plain !block h-auto rounded-xl px-3 py-2 -mx-1 active:scale-[0.98]">
+                        <div class="flex items-baseline gap-3">
+                            <span class="text-30 font-mono text-sm shrink-0">{no(post.slug)}</span>
+                            <span class="text-90 group-hover:text-[var(--primary)] font-medium transition">
+                                {post.data.title.replace(/^\d{2}\s*·\s*/, "")}
+                            </span>
+                        </div>
+                    </a>
+                ))}
+            </div>
+        </div>
+    )}
 
     {bolumler.map(([baslik, aciklama, bas, son]) => {
         const grup = grupla(bas, son);
